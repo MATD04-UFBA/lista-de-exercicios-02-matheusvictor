@@ -24,3 +24,21 @@ vector<int> ordernarSelecao(vector<int> v) {
     
     return v;
 }
+
+vector<int> odernarBubble(vector<int> v) {
+
+    int maiorElemento, aux; 
+
+    for (int ultimaPosicaoVetor = (v.size() - 1); ultimaPosicaoVetor > 0; ultimaPosicaoVetor--) {    // começa da última posição do vetor e a cada passada no laço, 
+                                                                                                    // vai uma "passo" em direção a primeira posição do vetor
+        for (int i = 0; i < ultimaPosicaoVetor; i++) {                    
+            if (v[i] > v[i+1]) {
+                aux = v[i+1];
+                v[i+1] = v[i];
+                v[i] = aux;
+            }
+        }
+    }
+
+    return v;
+}

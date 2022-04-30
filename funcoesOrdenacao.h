@@ -12,4 +12,4 @@ vector<int> ordernarSelecao(vector<int> v);
 
 void ordernarInsercao(vector<int> v);
 
-void odernarBubble(vector<int> v);
+vector<int> odernarBubble(vector<int> v);
