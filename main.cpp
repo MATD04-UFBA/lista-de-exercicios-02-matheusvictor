@@ -1,14 +1,35 @@
 #include "funcoesOrdenacao.h"
+#include "utils.h"
+
+#define TAMANHO_MAXIMO 10
 
 int main() {
 
-    vector<int> v = {10, 40, 1, 5, 0, 82};
-    ordernarSelecao(v);
-    vector<int> vetorOrdenado = ordernarSelecao(v);
+    vector<int> vetor = gerarVetorDesordenado(TAMANHO_MAXIMO);
 
-    for (int i = 0; i < vetorOrdenado.size(); i++) {
-        std::cout << " - " << vetorOrdenado[i] ;
+    cout << "=======================================" << endl;
+    cout << "|          NO VETOR DESORDENADO       |" << endl;
+    cout << "=======================================" << endl;
+    
+    for (int i = 0; i < vetor.size(); i++) {
+        cout << vetor[i] << " ";
     }
+
+    cout << endl;
+
+    // ordernarSelecao(vetor);
+    // odernarBubble(vetor);
+    ordernarInsercao(vetor);
+
+    cout << "=======================================" << endl;
+    cout << "|            NO VETOR ORDENADO        |" << endl;
+    cout << "=======================================" << endl;
+
+    for (int i = 0; i < vetor.size(); i++) {
+        cout << vetor[i] << " ";
+    }
+
+    cout << endl;
 
     system("pause");
     return 0;

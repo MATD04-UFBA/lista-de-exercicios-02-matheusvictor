@@ -8,8 +8,8 @@
 
 using namespace std;
 
-vector<int> ordernarSelecao(vector<int> v);
+vector<int> odernarBubble(vector<int> &v);
 
-void ordernarInsercao(vector<int> v);
+vector<int> ordernarSelecao(vector<int> &v);
 
-vector<int> odernarBubble(vector<int> v);
+vector<int> ordernarInsercao(vector<int> &v);

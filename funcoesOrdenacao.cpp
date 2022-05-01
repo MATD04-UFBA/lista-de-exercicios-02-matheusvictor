@@ -2,7 +2,7 @@
 
 using namespace std;
 
-vector<int> ordernarSelecao(vector<int> v) {
+vector<int> ordernarSelecao(vector<int> &v) {
 
     int menorElemento, aux = 0;
 
@@ -25,7 +25,7 @@ vector<int> ordernarSelecao(vector<int> v) {
     return v;
 }
 
-vector<int> odernarBubble(vector<int> v) {
+vector<int> odernarBubble(vector<int> &v) {
 
     int maiorElemento, aux; 
 
@@ -41,4 +41,25 @@ vector<int> odernarBubble(vector<int> v) {
     }
 
     return v;
+}
+
+vector<int> ordernarInsercao(vector<int> &v) {
+
+    int elementoAtualVetor, posicaoAnteriorVetor;
+    
+    for(int i = 1; i < v.size(); i++) {
+        
+        int elementoAtual = v[i]; // 2
+        int posicaoAnterior = i-1; // 7
+        
+        while(posicaoAnterior >= 0 && v[posicaoAnterior] > elementoAtual) {
+           v[posicaoAnterior+1] = v[posicaoAnterior];
+           posicaoAnterior--;
+        }
+        
+        v[posicaoAnterior+1] = elementoAtual;
+    }
+
+    return v;     
+
 }
